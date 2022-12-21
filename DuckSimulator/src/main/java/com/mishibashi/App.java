@@ -11,5 +11,10 @@ public class App
         Duck mallard = new MallardDuck();
         mallard.performQuack();
         mallard.performFly();
+
+        Duck model = new ModelDuck();
+        model.performFly();
+        model.setFlyBehavior(new FlyRocketPowered());   // 動的に振る舞いを変更
+        model.performFly();
     }
 }
