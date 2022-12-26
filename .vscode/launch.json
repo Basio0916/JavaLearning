@@ -6,6 +6,12 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch SwingObserverExample",
+            "request": "launch",
+            "mainClass": "com.mishibashi.SwingObserverExample"
+        },
+        {
+            "type": "java",
             "name": "Launch App",
             "request": "launch",
             "mainClass": "com.mishibashi.App"
