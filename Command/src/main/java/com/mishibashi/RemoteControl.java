@@ -42,6 +42,7 @@ public class RemoteControl {
         for(int i=0; i<onCommands.length; i++){
             stringBuff.append(" [スロット" + i + "]  " + onCommands[i].getClass().getName() + " " + offCommands[i].getClass().getName() + "\n");
         }
+        stringBuff.append(" [アンドゥ] " + undoCommand.getClass().getName() + "\n");
         return stringBuff.toString();
     }
 }
