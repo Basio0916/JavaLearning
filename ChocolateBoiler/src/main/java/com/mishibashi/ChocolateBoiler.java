@@ -1,39 +1,41 @@
 package com.mishibashi;
 
-public class ChocolateBoiler {
+public enum ChocolateBoiler {
+    INSTANCE;
+    
     private boolean empty;
     private boolean boiled;
-
-    private static ChocolateBoiler uniqueInstance;
-
-    private ChocolateBoiler(){
-        empty = true;
-        boiled = false;
-    }
+    private boolean initialized;
 
     public static ChocolateBoiler getInstance(){
-        if(uniqueInstance == null){
-            uniqueInstance = new ChocolateBoiler();
+        if(INSTANCE.initialized == false){
+            INSTANCE.initialized = true;
+            INSTANCE.empty = true;
+            INSTANCE.boiled = false;
         }
-        return uniqueInstance;
+
+        return INSTANCE;
     }
 
     public void fill(){
         if(isEmpty()){
             empty = false;
             boiled = false;
+            System.out.println("fill");
         }
     }
 
     public void drain(){
         if(!isEmpty() && isBoiled()){
             empty = true;
+            System.out.println("drain");
         }
     }
 
     public void boil(){
         if(!isEmpty() && !isBoiled()){
             boiled = true;
+            System.out.println("boil");
         }
     }
 
