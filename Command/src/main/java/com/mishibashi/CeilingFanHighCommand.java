@@ -1,16 +1,16 @@
 package com.mishibashi;
 
-public class CeilingFanOffCommand implements Command{
+public class CeilingFanHighCommand implements Command{
     CeilingFan ceilingFan;
     int previousSpeed;
 
-    public CeilingFanOffCommand(CeilingFan ceilingFan){
+    public CeilingFanHighCommand(CeilingFan ceilingFan){
         this.ceilingFan = ceilingFan;
     }
 
     public void execute(){
         previousSpeed = ceilingFan.getSpeed();
-        ceilingFan.off();
+        ceilingFan.high();
     }
 
     public void undo(){
