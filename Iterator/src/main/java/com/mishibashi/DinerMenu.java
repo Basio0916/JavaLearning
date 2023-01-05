@@ -1,5 +1,7 @@
 package com.mishibashi;
 
+import java.util.Iterator;
+
 public class DinerMenu {
     static final int MAX_ITEMS = 6;
     int numberOfItems = 0;
@@ -25,7 +27,11 @@ public class DinerMenu {
         }
     }
 
-    public MenuItem[] getMenuItems(){
-        return menuItems;
+    // public MenuItem[] getMenuItems(){
+    //     return menuItems;
+    // }
+
+    public Iterator<MenuItem> createIterator(){
+        return new DinerMenuIterator(menuItems);
     }
 }
