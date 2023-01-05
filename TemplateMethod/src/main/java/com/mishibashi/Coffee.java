@@ -1,26 +1,11 @@
 package com.mishibashi;
 
-public class Coffee {
-    void prepareRecipe(){
-        boilWater();
-        brewCoffeeGrinds();
-        pourInCup();
-        addSugarAndMilk();
-    }
-
-    public void boilWater(){
-        System.out.println("お湯を沸かす");
-    }
-
-    public void brewCoffeeGrinds(){
+public class Coffee extends CaffeineBeverage{
+    public void brew(){
         System.out.println("フィルタでコーヒーをドリップする");
     }
 
-    public void pourInCup(){
-        System.out.println("カップに注ぐ");
-    }
-
-    public void addSugarAndMilk(){
+    public void addCondiments(){
         System.out.println("砂糖とミルクを追加する");
     }
 }
