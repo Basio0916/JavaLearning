@@ -24,4 +24,8 @@ public class DinerMenuIterator implements Iterator<MenuItem>{
             return true;
         }
     }
+
+    public void remove(){
+        throw new UnsupportedOperationException("メニューの削除を試みてはいけない。");
+    }
 }
