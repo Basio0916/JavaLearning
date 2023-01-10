@@ -28,4 +28,7 @@ public class NoQuarterState implements State{
         System.out.println("まずお金を払う必要があります");
     }
     
+    public String toString(){
+        return "マシンは25セントが投入されるのを待っています";
+    }
 }
