@@ -1,11 +1,15 @@
 package com.mishibashi;
 
+import java.rmi.Naming;
+import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
 import java.rmi.server.UnicastRemoteObject;
 
-public class Server implements Hello{
-    public Server(){}
+public class Server extends UnicastRemoteObject implements Hello{
+    private static final long serialVersionUID = 1L;
+
+    public Server() throws RemoteException{}
 
     public String sayHello(){
         return "Hello, world!";
@@ -14,10 +18,7 @@ public class Server implements Hello{
     public static void main(String args[]){
         try{
             Server obj = new Server();
-            Hello stub = (Hello) UnicastRemoteObject.exportObject(obj, 0);
-
-            Registry registry = LocateRegistry.getRegistry();
-            registry.bind("Hello", stub);
+            Naming.rebind("Hello", obj);
 
             System.err.println("Server ready");
         }
