@@ -27,6 +27,8 @@ public class NoQuarterState implements State{
     public void dispense() {
         System.out.println("まずお金を払う必要があります");
     }
+
+    public void refill(){}
     
     public String toString(){
         return "マシンは25セントが投入されるのを待っています";

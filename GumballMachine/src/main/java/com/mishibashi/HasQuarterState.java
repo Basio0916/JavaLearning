@@ -33,6 +33,8 @@ public class HasQuarterState implements State{
         System.out.println("ガムボールが出せません");
     }
 
+    public void refill(){}
+
     public String toString(){
         return "マシンには25セントが投入されています";
     }

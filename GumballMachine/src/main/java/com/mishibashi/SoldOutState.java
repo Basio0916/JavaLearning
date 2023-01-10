@@ -23,6 +23,10 @@ public class SoldOutState implements State{
         System.out.println("販売するガムボールはありません");
     }
 
+    public void refill(){
+        gumballMachine.setState(gumballMachine.getNoQuarterState());
+    }
+
     public String toString(){
         return "売り切れです";
     }

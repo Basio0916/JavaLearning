@@ -37,6 +37,8 @@ public class WinnerState implements State{
         }
     }
 
+    public void refill(){}
+
     public String toString(){
         return "当たりです";
     }

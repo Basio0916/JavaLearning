@@ -30,6 +30,8 @@ public class SoldState implements State{
         }
     }
 
+    public void refill(){}
+
     public String toString(){
         return "マシンはガムボールを排出中です";
     }

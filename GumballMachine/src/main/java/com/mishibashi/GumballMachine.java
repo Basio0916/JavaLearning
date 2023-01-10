@@ -49,6 +49,12 @@ public class GumballMachine {
         }
     }
 
+    public void refill(int count){
+        this.count += count;
+        System.out.println("ガムボールマシンに補充しました。新たなガムボール数 : " + this.count);
+        state.refill();
+    }
+
     public State getSoldOutState(){
         return soldOutState;
     }
