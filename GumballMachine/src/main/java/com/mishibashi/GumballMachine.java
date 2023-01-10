@@ -1,6 +1,10 @@
 package com.mishibashi;
 
-public class GumballMachine {
+import java.rmi.*;
+import java.rmi.server.*;
+
+public class GumballMachine extends UnicastRemoteObject implements GumballMachineRemote{
+    private static final long serialVersionUID = 1L;
     State soldOutState;
     State noQuarterState;
     State hasQuarterState;
@@ -11,7 +15,7 @@ public class GumballMachine {
     int count = 0;
     String location;
 
-    public GumballMachine(String location, int count){
+    public GumballMachine(String location, int count) throws RemoteException{
         soldOutState = new SoldOutState(this);
         noQuarterState = new NoQuarterState(this);
         hasQuarterState = new HasQuarterState(this);
