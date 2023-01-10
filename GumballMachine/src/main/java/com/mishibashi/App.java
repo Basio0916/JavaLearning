@@ -8,7 +8,8 @@ public class App
 {
     public static void main( String[] args )
     {
-        GumballMachine gumballMachine = new GumballMachine(5);
+        GumballMachine gumballMachine = new GumballMachine("Austin", 5);
+        GumballMonitor monitor = new GumballMonitor(gumballMachine);
 
         System.out.println(gumballMachine);
 
@@ -40,5 +41,7 @@ public class App
         gumballMachine.turnCrank();
 
         System.out.println(gumballMachine);
+
+        monitor.report();
     }
 }

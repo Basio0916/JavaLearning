@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Server",
+            "request": "launch",
+            "mainClass": "com.mishibashi.Server",
+            "projectName": "Rmi"
+        },
+        {
+            "type": "java",
             "name": "Launch SwingObserverExample",
             "request": "launch",
             "mainClass": "com.mishibashi.SwingObserverExample"

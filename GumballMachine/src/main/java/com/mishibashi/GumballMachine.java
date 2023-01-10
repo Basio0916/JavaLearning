@@ -9,14 +9,16 @@ public class GumballMachine {
 
     State state = soldOutState;
     int count = 0;
+    String location;
 
-    public GumballMachine(int count){
+    public GumballMachine(String location, int count){
         soldOutState = new SoldOutState(this);
         noQuarterState = new NoQuarterState(this);
         hasQuarterState = new HasQuarterState(this);
         soldState = new SoldState(this);
         winnerState = new WinnerState(this);
         this.count = count;
+        this.location = location;
         if(count > 0){
             state = noQuarterState;
         }
@@ -77,6 +79,14 @@ public class GumballMachine {
 
     public int getCount(){
         return count;
+    }
+
+    public String getLocation(){
+        return location;
+    }
+
+    public State getState(){
+        return state;
     }
 
     public String toString(){
