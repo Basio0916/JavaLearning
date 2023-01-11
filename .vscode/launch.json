@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch GumballMonitorTestDrive",
+            "request": "launch",
+            "mainClass": "com.mishibashi.GumballMonitorTestDrive",
+            "projectName": "GumballMachine"
+        },
+        {
+            "type": "java",
+            "name": "Launch GumballMachineTestDrive",
+            "request": "launch",
+            "mainClass": "com.mishibashi.GumballMachineTestDrive",
+            "projectName": "GumballMachine"
+        },
+        {
+            "type": "java",
             "name": "Launch Client",
             "request": "launch",
             "mainClass": "com.mishibashi.Client",
