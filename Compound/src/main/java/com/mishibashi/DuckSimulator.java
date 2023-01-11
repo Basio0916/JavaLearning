@@ -33,11 +33,11 @@ public class DuckSimulator {
 
         flockOfDucks.add(flockOfMallards);
 
-        System.out.println("\nカモシミュレーター：群れ全体のシミュレーション");
-        simulate(flockOfDucks);
+        System.out.println("\nカモシミュレーター：オブザーバ付き");
+        Quackologist quackologist = new Quackologist();
+        flockOfDucks.registerObserver(quackologist);
 
-        System.out.println("\nカモシミュレーター：マガモの群れのシミュレーション");
-        simulate(flockOfMallards);
+        simulate(flockOfDucks);
 
         System.out.println("カモが鳴いた回数 : " + QuackCounter.getQuacks() + "回");
     }
