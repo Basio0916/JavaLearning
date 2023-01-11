@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch DuckSimulator",
+            "request": "launch",
+            "mainClass": "com.mishibashi.DuckSimulator",
+            "projectName": "Compound"
+        },
+        {
+            "type": "java",
             "name": "Launch GumballMonitorTestDrive",
             "request": "launch",
             "mainClass": "com.mishibashi.GumballMonitorTestDrive",
