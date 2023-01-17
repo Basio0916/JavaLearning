@@ -1,0 +1,6 @@
+com\mishibashi\BeatObserver.class
+com\mishibashi\BeatModelInterface.class
+com\mishibashi\DJView.class
+com\mishibashi\BeatModel.class
+com\mishibashi\BPMObserver.class
+com\mishibashi\App.class

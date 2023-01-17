@@ -22,5 +22,9 @@ public class SwingObserverExample
         JButton button = new JButton("これをすべきですか？");
         button.addActionListener(event -> System.out.println("してはいけません、後悔しますよ！"));
         button.addActionListener(event -> System.out.println("さあ、やってしまいなさい！"));
+
+        frame.add(button);
+        frame.setSize(600, 400);
+        frame.setVisible(true);
     }
 }
